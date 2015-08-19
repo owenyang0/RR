@@ -6,10 +6,6 @@ var VoteButtons = React.createClass({
 
   mixins: [RR.observe(['plus$', 'minus$'])],
 
-  getInitialState: function() {
-    return { value: 0 };
-  },
-
   minus$: function() {
     var minusOne = this.refs.btnMinusOne.getDOMNode();
     return Rx.Observable.fromEvent(minusOne, 'click').map({ val: -1, id: this.props.id });
@@ -23,7 +19,7 @@ var VoteButtons = React.createClass({
   render: function() {
     return (
       <div>
-        <button ref="btnMinusOne" onClick={this.handleMinusOne}>-1</button>
+        <button ref="btnMinusOne">-1</button>
         <span>{this.props.val}</span>
         <button ref="btnPlusOne">+1</button>
       </div>

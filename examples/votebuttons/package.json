@@ -22,6 +22,7 @@
     ]
   },
   "devDependencies": {
-    "reactify": "^1.0.0"
+    "reactify": "^1.0.0",
+    "watchify": "^3.3.1"
   }
 }
